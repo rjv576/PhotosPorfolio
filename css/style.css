@@ -1,0 +1,158 @@
+body {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+
+header {
+    color: white;
+    text-align: center;
+    width: calc(100% - 200px); /* Ajusta el ancho del header */
+    margin-left: 200px; /* Deja espacio para el menú */
+    
+}
+
+header .contenedor h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem;
+    color: #000;
+
+}
+
+nav {
+    background-color: #fff;
+    padding: 1rem;
+    width: 200px; /* Ancho del menú */
+    height: 100vh; /* Altura completa de la ventana */
+    position: fixed; /* Fija el menú en su posición */
+    top: 0;
+    left: 50px;
+    display: block; /* Asegura que el menú sea vertical */
+
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    margin: 1rem 0; /* Espaciado vertical entre los enlaces */
+    display: block; /* Hace que los enlaces sean bloques para que se apilen verticalmente */
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+section {
+    margin-left: 250px; /* Deja espacio para el menú */
+    padding: 2rem;
+}
+
+
+
+/* seccion sobre mi */
+section.about {
+    width: 80%;
+    background-image: linear-gradient(45deg, #07d1be, #027c74);
+    padding: 0;
+}
+section.about .contenedor {
+    width: 60%;
+    margin: auto; /* Centra el contenido */
+    text-align: center;
+    /*agrega un degradado de color de fondo*/
+    padding: 1rem 0; /* Añade espacio alrededor del contenido */
+}
+
+section.about .contenedor h2 {
+    color: #fff;
+    font-size: 2rem; /* Tamaño del texto */
+    margin: 20px 20px; /* Espaciado vertical */
+    padding: 1rem;
+}
+
+section.about .contenedor .texto {
+    width: 100%; 
+}
+section.about .contenedor .texto p {
+    color: #fff;
+    font-size: 1rem; /* Tamaño del texto */
+    margin: 20px 20px; /* Espaciado vertical */
+    padding: 1rem;
+}
+
+/* Estilo específico para la foto de perfil */
+.profile-pic {
+    width: 500px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción original */
+    /* agregar un cuadro sombreado */
+    border: 1px solid #000;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* como se aumenta la sombra 
+    10px: Desplazamiento horizontal de la sombra.
+    10px: Desplazamiento vertical de la sombra.
+    20px: Desenfoque de la sombra (aumenta este valor para hacer la sombra más difusa).*/
+
+    /*border-radius: 50%; /* Hace que la imagen sea circular */
+    /*margin-bottom: 1rem; /* Añade espacio debajo de la imagen */
+}
+
+/* seccion de galeria */
+section.galeria {
+    width: 80%;
+    background-image: linear-gradient(45deg, #0798d1, #027c74);
+    padding: 0;
+}
+
+section.galeria h2 {
+    margin-top: 0 !important; /* Elimina el margen superior */
+    color: #fff;
+    font-size: 2rem; /* Tamaño del texto */
+    text-align: center;
+    padding: 1rem;
+}
+
+section.galeria .contenedor-galeria {
+    width: 60%;
+    margin: auto; /* Centra el contenido */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el tamaño mínimo de las columnas */
+    gap: 1rem;
+}
+
+.foto {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.foto img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción original */
+    transition: transform 0.3s ease;
+}
+
+.foto:hover img {
+    transform: scale(1.1);
+}
+
+.foto p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.foto:hover p {
+    background: rgba(0, 0, 0, 0.7);
+}

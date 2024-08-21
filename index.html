@@ -1,0 +1,86 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Fotografía - Taly Photos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            
+            <nav class="menu">
+                <h1 class="titulo">Taly Photos</h1>
+                <a href="index.html">Inicio</a>
+                <a href="galeria.html">Galería</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="contenedor">
+        <h2>Sobre mi</h2>
+        <img class="profile-pic" src="img/Retrato/S58.jpeg" alt="Foto de perfil">
+        <div class="texto">
+            <p>Hola, soy Taly, una fotografa apasionada por capturar momentos únicos y especiales. Bienvenido a mi portafolio.</p>
+            <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+            mail: example@example.com
+            
+            tel: 5353 35531</p>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="galeria">
+        <h2>Galería</h2>
+        <div class="contenedor-galeria">
+           
+            <div class="foto" onclick="openModal('img/Arquitectura/Copy of arquitectura.jpg', 'Descripción de la foto 1')">
+                <img src="img/Arquitectura/Copy of arquitectura.jpg" alt="">
+                <p>Descripción</p>
+                
+            </div>
+            <div class="foto" onclick="openModal('img/Comida/Copy of 1 food.jpg', 'Descripción de la foto 2')">
+                <img src="img/Comida/Copy of 1 food.jpg" alt="">
+                <p>Descripción</p>
+        
+            </div>
+            <div class="foto" onclick="openModal('img/Editorial/Copia de E 46.jpg', 'Descripción de la foto 3')">
+                <img src="img/Editorial/Copia de E 46.jpg" alt="">
+                <p>Descripción</p>
+        
+            </div>
+            <div class="foto" onclick="openModal('img/Joyeria/Copy of prenda 1.jpg', 'Descripción de la foto 4')">
+                <img src="img/Joyeria/Copy of prendas.jpg" alt="">
+                <p>Descripción</p>
+            
+            </div>
+            <div class="foto" onclick="openModal('img/Paisaje/Copy of DSC00193.JPG', 'Descripción de la foto 5')">
+                <img src="img/Retrato/S58.jpeg" alt="">
+                <p>Descripción</p>
+    
+            </div>
+            <div class="foto" onclick="openModal('img/Retrato/IMG_2403.PNG', 'Descripción de la foto 6')">
+                <img src="img/Editorial/Copy of E 40.jpg" alt="">
+                <p>Descripción</p>
+            </div>
+
+        </div>
+          <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/a6469d7e42.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
