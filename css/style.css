@@ -351,12 +351,11 @@ section.galeria .contenedor-galeria {
 
 .footer {
     width: 100%;
-    padding: 0;
+
     background-color: #333;
 }
 
 .footer .contenedor {
-    width: 60%;
     margin: auto;
     padding: 1rem;
     text-align: center;

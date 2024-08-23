@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+#navbar {
+    /* gradiente el background */
+    background:coral;
+    position:fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+  
+  /* Style the navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+  
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.row {
+    margin-bottom:auto;
+    background: #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+  
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+}
+
+/* Estilos para el footer */
+
+.footer {
+    position:relative;
+    float: inline-end;
+    width: 100%;
+    height: auto;
+    background-color: coral;
+}
+
+.footer .contenedor {
+    margin: 0px 0px 0px 0px;
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer .contenedor p {
+    color: #fff;
+    font-size: 1rem;
+    margin: 10px 10px;
+    padding: 0.5rem;
+}
+
+.footer .contenedor a {
+    color: #fff;
+    text-decoration: none;
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.footer .contenedor a:hover {
+    color: #ccc;
+}
+
