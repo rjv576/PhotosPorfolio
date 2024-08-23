@@ -11,108 +11,119 @@
 <body>
     <header class="encabezado">
         <div class="contenedor">
-            
-            <nav class="menu">
-                <h1 class="titulo">Taly Photos</h1>
-                <a href="index.html">Inicio</a>
-                <a href="galeria.html">Galería</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+            <div class="sidebar">
+                <nav class="menu">
+                    <h1 class="titulo">Taly Photos</h1>
+                    <a class="active" href="index.html">Inicio</a>
+                    <a href="galeria.html">Galería</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
         </div>
     </header>
-
-    <section class="about">
-        <div class="contenedor">
-        <h2>Sobre mi</h2>
-        <img class="profile-pic" src="img/Retrato/S58.jpeg" alt="Foto de perfil">
-        <div class="texto">
-            <p>Hola, soy Taly, una fotografa apasionada por capturar momentos únicos y especiales. Bienvenido a mi portafolio.</p>
-            <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-            mail: example@example.com
-            
-            tel: 5353 35531</p>
-        </div>
-
-        </div>
-    </section>
-
-    <section class="galeria">
-        <h2>Galería</h2>
-        <div class="contenedor-galeria">
-           
-            <div class="foto" onclick="openModal('img/Arquitectura/Copy of arquitectura.jpg', 'Descripción de la foto 1')">
-                <img src="img/Arquitectura/Copy of arquitectura.jpg" alt="">
-                <p>Descripción</p>
+    <div class="contenido">
+        <section class="about">
+            <div class="contenedor">
+            <h2>Sobre mi</h2>
+            <img class="profile-pic" src="img/Retrato/S58.jpeg" alt="Foto de perfil">
+            <div class="texto">
+                <p>Hola, soy Taly, una fotografa apasionada por capturar momentos únicos y especiales. Bienvenido a mi portafolio.</p>
+                <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    
+                mail: example@example.com
                 
+                tel: 5353 35531</p>
             </div>
-            <div class="foto" onclick="openModal('img/Comida/Copy of 1 food.jpg', 'Descripción de la foto 2')">
-                <img src="img/Comida/Copy of 1 food.jpg" alt="">
-                <p>Descripción</p>
-        
-            </div>
-            <div class="foto" onclick="openModal('img/Editorial/Copia de E 46.jpg', 'Descripción de la foto 3')">
-                <img src="img/Editorial/Copia de E 46.jpg" alt="">
-                <p>Descripción</p>
-        
-            </div>
-            <div class="foto" onclick="openModal('img/Joyeria/Copy of prendas.jpg', 'Descripción de la foto 4')">
-                <img src="img/Joyeria/Copy of prendas.jpg" alt="">
-                <p>Descripción</p>
-            
-            </div>
-            <div class="foto" onclick="openModal('img/Retrato/S58.jpeg', 'Descripción de la foto 5')">
-                <img src="img/Retrato/S58.jpeg" alt="">
-                <p>Descripción</p>
     
             </div>
-            <div class="foto" onclick="openModal('img/Editorial/Copy of E 40.jpg', 'Descripción de la foto 6')">
-                <img src="img/Editorial/Copy of E 40.jpg" alt="">
-                <p>Descripción</p>
+        </section>
+    
+        <section class="galeria">
+            <h2>Galería</h2>
+            <div class="contenedor-galeria">
+               
+                <div class="foto" onclick="openModal('img/Arquitectura/Copy of arquitectura.jpg', 'Descripción de la foto 1')">
+                    <img src="img/Arquitectura/Copy of arquitectura.jpg" srcset="img/Arquitectura/Copy of arquitectura.jpg 480w, img/Arquitectura/Copy of arquitectura.jpg 800w, img/Arquitectura/Copy of arquitectura.jpg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="">
+                    <p>Descripción</p>
+                    
+                </div>
+                <div class="foto" onclick="openModal('img/Comida/Copy of 1 food.jpg', 'Descripción de la foto 2')">
+                    <img src="img/Comida/Copy of 1 food.jpg" srcset="img/Comida/Copy of 1 food.jpg 480w, img/Comida/Copy of 1 food.jpg 800w, img/Comida/Copy of 1 food.jpg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="">
+                    <p>Descripción</p>
+            
+                </div>
+                <div class="foto" onclick="openModal('img/Editorial/Copia de E 46.jpg', 'Descripción de la foto 3')">
+                    <img src="img/Editorial/Copia de E 46.jpg" srcset="img/Editorial/Copia de E 46.jpg 480w,img/Editorial/Copia de E 46.jpg 800w, img/Editorial/Copia de E 46.jpg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="">
+                    <p>Descripción</p>
+            
+                </div>
+                <div class="foto" onclick="openModal('img/Joyeria/Copy of prendas.jpg', 'Descripción de la foto 4')">
+                    <img src="img/Joyeria/Copy of prendas.jpg" srcset="img/Joyeria/Copy of prendas.jpg 480w, img/Joyeria/Copy of prendas.jpg 800w, img/Joyeria/Copy of prendas.jpg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="">
+                    <p>Descripción</p>
+                
+                </div>
+                <div class="foto" onclick="openModal('img/Retrato/S58.jpeg', 'Descripción de la foto 5')">
+                    <img src="img/Retrato/S58.jpeg" srcset="img/Retrato/S58.jpeg 480w, img/Retrato/S58.jpeg 800w, img/Retrato/S58.jpeg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="">
+                    <p>Descripción</p>
+        
+                </div>
+                <div class="foto" onclick="openModal('img/Editorial/Copy of E 40.jpg', 'Descripción de la foto 6')">
+                    <img src="img/Editorial/Copy of E 40.jpg" srcset="img/Editorial/Copy of E 40.jpg 480w, img/Editorial/Copy of E 40.jpg 800w, img/Editorial/Copy of E 40.jpg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="">
+                    <p>Descripción</p>
+                </div>
+    
+                <div class="foto" onclick="openModal('img/Editorial/Copia de E 46.jpg', 'Descripción de la foto 7')">
+                    <img src="img/Editorial/Copia de E 46.jpg" srcset="img/Editorial/Copia de E 46.jpg 480w, img/Editorial/Copia de E 46.jpg 800w, img/Editorial/Copia de E 46.jpg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"  alt="">
+                    <p>Descripción</p>
+                </div>
+    
+                <div class="foto" onclick="openModal('img/Producto-Servicio/Copy of Afros_ Lashes Studio.jpg', 'Descripción de la foto 8')">
+                    <img src="img/Producto-Servicio/Copy of Afros_ Lashes Studio.jpg" srcset="img/Producto-Servicio/Copy of Afros_ Lashes Studio.jpg 480w, img/Producto-Servicio/Copy of Afros_ Lashes Studio.jpg 800w, img/Producto-Servicio/Copy of Afros_ Lashes Studio.jpg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="">
+                    <p>Descripción</p>
+                </div>
+    
+                <div class="foto" onclick="openModal('img/Retrato/S88.jpeg', 'Descripción de la foto 9')">
+                    <img src="img/Retrato/S88.jpeg" srcset="img/Retrato/S88.jpeg 480w, img/Retrato/S88.jpeg 800w, img/Retrato/S88.jpeg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="">
+                    <p>Descripción</p>
+                </div>
+    
+                <div class="foto" onclick="openModal('img/Rostro/Copy of A 51.jpg', 'Descripción de la foto 10')">
+                    <img src="img/Rostro/Copy of A 51.jpg" srcset="img/Rostro/Copy of A 51.jpg 480w, img/Rostro/Copy of A 51.jpg 800w, img/Rostro/Copy of A 51.jpg 1200w" 
+                    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px" alt="">
+                    <p>Descripción</p>
+                </div>
+
             </div>
 
-            <div class="foto" onclick="openModal('img/Editorial/Copia de E 46.jpg', 'Descripción de la foto 7')">
-                <img src="img/Editorial/Copia de E 46.jpg" alt="">
-                <p>Descripción</p>
+        </section>
+    
+        <footer class="footer">
+            <div class="contenedor">
+                <p>Taly Photos &copy; 2021</p>
+                <div class="redes">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
+        </footer>
+              <!-- Modal -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+            <div id="caption"></div>
+        </div>    
 
-            <div class="foto" onclick="openModal('img/Producto-Servicio/Copy of Afros_ Lashes Studio.jpg', 'Descripción de la foto 8')">
-                <img src="img/Producto-Servicio/Copy of Afros_ Lashes Studio.jpg" alt="">
-                <p>Descripción</p>
-            </div>
-
-            <div class="foto" onclick="openModal('img/Retrato/S88.jpeg', 'Descripción de la foto 9')">
-                <img src="img/Retrato/S88.jpeg" alt="">
-                <p>Descripción</p>
-            </div>
-
-            <div class="foto" onclick="openModal('img/Joyeria/Copy of prendas.jpg', 'Descripción de la foto 10')">
-                <img src="img/Joyeria/Copy of prendas.jpg" alt="">
-                <p>Descripción</p>
-            </div>
-
-
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="contenedor">
-            <p>Taly Photos &copy; 2021</p>
-            <div class="redes">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </footer>
-          <!-- Modal -->
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImg">
-        <div id="caption"></div>
     </div>
-
-
 
     <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/a6469d7e42.js" crossorigin="anonymous"></script>

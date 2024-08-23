@@ -5,17 +5,9 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    background: #ccc;
+    background: #fff;
 }
 
-
-header {
-    color: white;
-    text-align: center;
-    width: calc(100% - 200px); /* Ajusta el ancho del header */
-    margin-left: 200px; /* Deja espacio para el menú */
-    
-}
 
 header .contenedor h1 {
     font-size: 2rem;
@@ -25,39 +17,93 @@ header .contenedor h1 {
 
 }
 
-nav {
-    background-color: #fff;
-    padding: 1rem;
-    width: 200px; /* Ancho del menú */
-    height: 100vh; /* Altura completa de la ventana */
-    position: fixed; /* Fija el menú en su posición */
-    top: 0;
-    left: 50px;
-    display: block; /* Asegura que el menú sea vertical */
-
+/* The side navigation menu */
+.sidebar {
+    float: left;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 }
-
-nav a {
-    color: #000;
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
     text-decoration: none;
-    margin: 1rem 0; /* Espaciado vertical entre los enlaces */
-    display: block; /* Hace que los enlaces sean bloques para que se apilen verticalmente */
+}
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position:relative;
+      float: none;
+    }
+
+    .sidebar .titulo {
+        width: 100%;
+        text-align: center;
+
+    }
+    .sidebar a {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .contenido {
+        margin-left: 0;
+    }
+
+
+}
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        float: none;
+
+    }
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+    section.about {
+        margin-top: 5rem; /* Añade espacio superior a la sección "about" */
+    }
+    .contenido {
+        margin-left: 0;
+    }
 }
 
-nav a:hover {
-    color: #ccc;
+/* Style the content */
+.contenido{
+    margin-left: 15%;
+    /*ajusta el contenido a la derecha del sidebar*/
 }
-
-section {
-    margin-left: 250px; /* Deja espacio para el menú */
-    padding: 2rem;
-}
-
-
+  
 
 /* seccion sobre mi */
 section.about {
-    width: 80%;
+    width: 100%;
     background-image: linear-gradient(45deg, #07d1be, #027c74);
     padding: 0;
 }
@@ -101,9 +147,60 @@ section.about .contenedor .texto p {
     /*margin-bottom: 1rem; /* Añade espacio debajo de la imagen */
 }
 
+/* Media queries para diseño responsive */
+@media screen and (max-width: 1024px) {
+    section.about {
+        width: 100%;
+    }
+    section.about .contenedor {
+        width: 60%;
+    }
+    section.about .contenedor h2 {
+        font-size: 1.8rem;
+    }
+    .profile-pic {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.about {
+        width: 100%;
+    }
+    section.about .contenedor {
+        width: 60%;
+    }
+    section.about .contenedor h2 {
+        font-size: 1.5rem;
+    }
+    .profile-pic {
+        width: 300px;
+    }
+    .contenido{
+        margin-left: 0;
+        /*ajusta el contenido a la derecha del sidebar*/
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section.about {
+        width: 100%;
+        margin-left: 0;
+    }
+    section.about .contenedor {
+        width: 60%;
+    }
+    section.about .contenedor h2 {
+        font-size: 1.2rem;
+    }
+    .profile-pic {
+        width: 200px;
+    }
+}
+
 /* seccion de galeria */
 section.galeria {
-    width: 80%;
+    width: 100%;
     background-image: linear-gradient(45deg, #0798d1, #027c74);
     padding: 0;
 }
@@ -117,7 +214,7 @@ section.galeria h2 {
 }
 
 section.galeria .contenedor-galeria {
-    width: 60%;
+    width: 60%; /* Asegura que el contenedor ocupe todo el ancho disponible */
     margin: auto; /* Centra el contenido */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el tamaño mínimo de las columnas */
@@ -143,7 +240,7 @@ section.galeria .contenedor-galeria {
 
 .foto p {
     position: absolute;
-    bottom: 0;
+    bottom: -2;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -158,6 +255,44 @@ section.galeria .contenedor-galeria {
     background: rgba(0, 0, 0, 0.7);
 }
 
+/* Media queries para diseño responsive */
+@media screen and (max-width: 1024px) {
+    section.galeria {
+        width: 100%;
+    }
+    section.galeria h2 {
+        font-size: 1.8rem;
+    }
+    section.galeria .contenedor-galeria {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.galeria {
+        width: 100%;
+    }
+    section.galeria h2 {
+        font-size: 1.5rem;
+    }
+    section.galeria .contenedor-galeria {
+        width: 60%;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Ajusta el tamaño mínimo de las columnas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section.galeria {
+        width: 100%;
+    }
+    section.galeria h2 {
+        font-size: 1.2rem;
+    }
+    section.galeria .contenedor-galeria {
+        width: 60%;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Ajusta el tamaño mínimo de las columnas */
+    }
+}
 /* Modal Styles */
 
 /* Estilos para el modal */
@@ -216,11 +351,11 @@ section.galeria .contenedor-galeria {
 
 .footer {
     width: 100%;
+
     background-color: #333;
 }
 
 .footer .contenedor {
-    width: 50%;
     margin: auto;
     padding: 1rem;
     text-align: center;
@@ -243,3 +378,35 @@ section.galeria .contenedor-galeria {
     color: #ccc;
 }
 
+/* Media queries para diseño responsive */
+@media screen and (max-width: 1024px) {
+    .footer {
+        width: 100%;
+        margin: auto;
+    }
+    .footer .contenedor {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        width: 100%;
+    }
+    .footer .contenedor {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        width: 100%;
+        margin-left: 0;
+    }
+    .footer .contenedor {
+        width: 90%;
+    }
+    .footer .contenedor p {
+        font-size: 0.9rem;
+    }
+}
