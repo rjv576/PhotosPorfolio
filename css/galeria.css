@@ -48,10 +48,13 @@ header.encabezado {
     flex: 25%;
     max-width: 50%;
     padding: 0 4px;
+    height: auto;
+    margin: auto;
 }
   
 .column img {
-    margin-top: 8px;
+    margin-top: 2px;
+    margin-bottom: 8px;
     vertical-align: middle;
     width: 100%;
 }
