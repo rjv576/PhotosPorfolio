@@ -5,7 +5,7 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    background: #ccc;
+    background: #fff;
 }
 
 
@@ -19,8 +19,7 @@ header .contenedor h1 {
 
 /* The side navigation menu */
 .sidebar {
-    margin: 0;
-    padding: 0;
+    float: left;
     width: 15%;
     background-color: #f1f1f1;
     position: fixed;
@@ -48,32 +47,30 @@ header .contenedor h1 {
     color: white;
 }
   
-  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-}
-  
   /* On screens that are less than 700px wide, make the sidebar into a topbar */
   @media screen and (max-width: 700px) {
     .sidebar {
       width: 100%;
       height: auto;
       position:relative;
+      float: none;
+    }
+
+    .sidebar .titulo {
+        width: 100%;
+        text-align: center;
+
     }
     .sidebar a {
-        float: left;
+        float: none;
         width: 100%;
         text-align: center;
     }
-    div.content {
+    .contenido {
         margin-left: 0;
+    }
 
-    }
-    section.about {
-        margin-top: 5rem; /* Añade espacio superior a la sección "about" */
-    }
+
 }
   
   /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
@@ -82,6 +79,7 @@ header .contenedor h1 {
         width: 100%;
         height: auto;
         position: relative;
+        float: none;
 
     }
     .sidebar a {
@@ -91,18 +89,23 @@ header .contenedor h1 {
     section.about {
         margin-top: 5rem; /* Añade espacio superior a la sección "about" */
     }
+    .contenido {
+        margin-left: 0;
+    }
 }
 
-
-
+/* Style the content */
+.contenido{
+    margin-left: 15%;
+    /*ajusta el contenido a la derecha del sidebar*/
+}
+  
 
 /* seccion sobre mi */
 section.about {
-    width: 85%;
-    
+    width: 100%;
     background-image: linear-gradient(45deg, #07d1be, #027c74);
     padding: 0;
-    margin: auto; /* Centra la galería en la página */
 }
 section.about .contenedor {
     width: 60%;
@@ -147,8 +150,7 @@ section.about .contenedor .texto p {
 /* Media queries para diseño responsive */
 @media screen and (max-width: 1024px) {
     section.about {
-        
-        width: 85%;
+        width: 100%;
     }
     section.about .contenedor {
         width: 60%;
@@ -163,7 +165,7 @@ section.about .contenedor .texto p {
 
 @media screen and (max-width: 768px) {
     section.about {
-        width: 85%;
+        width: 100%;
     }
     section.about .contenedor {
         width: 60%;
@@ -174,11 +176,16 @@ section.about .contenedor .texto p {
     .profile-pic {
         width: 300px;
     }
+    .contenido{
+        margin-left: 0;
+        /*ajusta el contenido a la derecha del sidebar*/
+    }
 }
 
 @media screen and (max-width: 480px) {
     section.about {
-        width: 85%;
+        width: 100%;
+        margin-left: 0;
     }
     section.about .contenedor {
         width: 60%;
@@ -193,10 +200,9 @@ section.about .contenedor .texto p {
 
 /* seccion de galeria */
 section.galeria {
-    width: 85%;
+    width: 100%;
     background-image: linear-gradient(45deg, #0798d1, #027c74);
     padding: 0;
-    margin: auto; /* Centra la galería en la página */
 }
 
 section.galeria h2 {
@@ -234,7 +240,7 @@ section.galeria .contenedor-galeria {
 
 .foto p {
     position: absolute;
-    bottom: 0;
+    bottom: -2;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -252,7 +258,7 @@ section.galeria .contenedor-galeria {
 /* Media queries para diseño responsive */
 @media screen and (max-width: 1024px) {
     section.galeria {
-        width: 85%;
+        width: 100%;
     }
     section.galeria h2 {
         font-size: 1.8rem;
@@ -264,7 +270,7 @@ section.galeria .contenedor-galeria {
 
 @media screen and (max-width: 768px) {
     section.galeria {
-        width: 85%;
+        width: 100%;
     }
     section.galeria h2 {
         font-size: 1.5rem;
@@ -277,7 +283,7 @@ section.galeria .contenedor-galeria {
 
 @media screen and (max-width: 480px) {
     section.galeria {
-        width: 85%;
+        width: 100%;
     }
     section.galeria h2 {
         font-size: 1.2rem;
@@ -344,11 +350,9 @@ section.galeria .contenedor-galeria {
 
 
 .footer {
-    width: 85%;
-    margin: auto;
+    width: 100%;
     padding: 0;
     background-color: #333;
-
 }
 
 .footer .contenedor {
@@ -378,7 +382,7 @@ section.galeria .contenedor-galeria {
 /* Media queries para diseño responsive */
 @media screen and (max-width: 1024px) {
     .footer {
-        width: 85%;
+        width: 100%;
         margin: auto;
     }
     .footer .contenedor {
@@ -388,8 +392,7 @@ section.galeria .contenedor-galeria {
 
 @media screen and (max-width: 768px) {
     .footer {
-        width: 85%;
-        margin: auto;
+        width: 100%;
     }
     .footer .contenedor {
         width: 50%;
