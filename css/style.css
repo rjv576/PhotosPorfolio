@@ -131,6 +131,12 @@ section.mini-galeria {
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+    }
+    .grid-item img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
     }
 }
 
@@ -138,7 +144,9 @@ section.mini-galeria {
     .grid-container {
         grid-template-columns: 1fr;
     }
+ 
 }
+
 
 
 
@@ -148,26 +156,56 @@ section.mini-galeria {
 .about .contenedor-texto {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
 }
 
+.about .contenedor-texto h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about .contenedor-texto p {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+
 .about .contenedor-texto .button {
-    display: inline-block; /* Asegurar que los botones estén en línea */
+    width: 30%;
     text-decoration: none;
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
+    background-color: coral;
     color: white;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 2rem;
+}
+
+.about .contenedor-texto .botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .contenedor-texto .botones a {
+    margin: 1rem;
+    border-radius: 5px;
+    font-size: 2rem;
 }
 
 .about .contenedor-texto .button:hover {
     background-color: #0056b3;
+}
+
+@media (max-width: 1024px) {
+    .about .contenedor-texto .botones a {
+        font-size: 1rem;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -178,6 +216,9 @@ section.mini-galeria {
     .intro .contenedor-texto, .intro .contenedor-imagen,
     .about .contenedor-texto, .about .contenedor-imagen {
         max-width: 100%;
+    }
+    .about .contenedor-texto .botones a {
+        font-size: 1rem;
     }
 }
 
