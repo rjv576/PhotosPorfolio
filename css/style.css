@@ -51,7 +51,7 @@ header.encabezado {
 }
 
 .intro .contenedor-texto, .about .contenedor-texto {
-    margin-top: 1rem; /* Añadir margen superior para separar los elementos */
+    margin-top: 0.5rem; /* Añadir margen superior para separar los elementos */
     flex: 1; /* Permitir que el contenedor de texto ocupe el espacio disponible */
     max-width: 45%; /* Limitar el ancho máximo al 50% */
     padding: 1rem; /* Añadir padding para un mejor espaciado */
@@ -162,12 +162,12 @@ section.mini-galeria {
 .about .contenedor-texto h2 {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .about .contenedor-texto p {
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
