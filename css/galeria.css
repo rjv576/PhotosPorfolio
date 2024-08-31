@@ -38,45 +38,49 @@ header.encabezado {
     color: black;
 }
 
-
 .row {
-    margin-bottom:auto;
     background: #ddd;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:initial;
     padding: 0 4px;
+    align-items: flex-start; /* Alinear las columnas al inicio */
 }
   
 /* Create four equal columns that sits next to each other */
 .column {
     flex: 25%;
-    max-width: 50%;
+    max-width: 25%;
     padding: 0 4px;
     height: auto;
-    margin: auto;
+    margin: 0; /* Eliminar márgenes automáticos */
+    box-sizing: border-box; /*Asegurar que el padding se incluya en el ancho total */
 }
   
 .column img {
     margin-top: 2px;
     margin-bottom: 8px;
-    vertical-align: middle;
     width: 100%;
+    height: auto;
+    object-fit: cover;
 }
   
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
-      flex: 50%;
-      max-width: 50%;
+      flex: 50%; /* Ajustar el ancho de las columnas */
+      max-width: 50%; /* Ajustar el ancho máximo de las columnas */
     }
 }
   
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .column {
-      flex: 100%;
+      flex: 100%; /* Ajustar el ancho de las columnas */
       max-width: 100%;
+
+      
     }
+
 }
 
 /* Estilos para el footer */
