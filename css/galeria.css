@@ -41,17 +41,17 @@ header.encabezado {
 .row {
     background: #ddd;
     display: flex;
-    flex-wrap:initial;
+    flex-wrap:wrap;
     padding: 0 4px;
-    align-items: flex-start; /* Alinear las columnas al inicio */
+    /*align-items: flex-start; /* Alinear las columnas al inicio */
 }
   
 /* Create four equal columns that sits next to each other */
 .column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-    height: auto;
+    flex: 25%;/* Ajustar el ancho de las columnas */
+    max-width: 100%; /* Ajustar el ancho máximo de las columnas */
+    padding: 0 4px; /* Añadir algo de espacio entre las columnas */
+    height: auto; /* Ajustar la altura de las columnas */
     margin: 0; /* Eliminar márgenes automáticos */
     box-sizing: border-box; /*Asegurar que el padding se incluya en el ancho total */
 }
@@ -67,17 +67,16 @@ header.encabezado {
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
-      flex: 50%; /* Ajustar el ancho de las columnas */
+      flex: 25%; /* Ajustar el ancho de las columnas */
       max-width: 50%; /* Ajustar el ancho máximo de las columnas */
     }
 }
-  
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .column {
       flex: 100%; /* Ajustar el ancho de las columnas */
-      max-width: 100%;
-
+      max-width: 100%; /* Ajustar el ancho máximo de las columnas */
       
     }
 
