@@ -18,22 +18,28 @@
     </header>
 
     <section class="contacto">
-        <div class="contact-section">
-            <h2>Contact Information</h2>
-            <p>Email: <a href=mailto:Kristalysanchez@gmail.com?subject=Your Subject&body=Your Message">Kristalysanchez@gmail.com</a></p>
-            <p>Phone: <a href="tel:+17873713450">+1787-371-3450</a></p>
-            <p>Instagram: <a href="https://www.instagram.com/kristaly_photos/">kristaly_photos</a></p>
-            <p><a href="../PhotosPorfolio/descargable/Resume Kristaly Sanchez 2023 final.pdf" download="Resume_Kristaly.pdf">Download Resume</a></p>
-        </div>
+        <form id="contactForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Número de Teléfono:</label>
+            <input type="tel" id="phone" name="phone">
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+          </form>
     </section>
 
     <footer class="footer">
         <div class="contenedor">
             <p>Taly Photos &copy; 2021</p>
             <div class="redes">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/kristaly_photos/"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
