@@ -15,7 +15,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(form);
   
-  const response = await fetch('https://script.google.com/macros/s/AKfycbxHimmf3btfaFLDU91yQEo37AEd0yiXIHYGPJuyeqSnA0k4Dnqt-A6sqXFPUwb2oBiPtg/exec', {
+  const response = await fetch('https://script.google.com/macros/s/AKfycbx-SlSKOmbwm5I_7MfgPqvD0-pTIB341jUqnvoyEKho7q2Uc72epYJdLZ5kGouCBr37qw/exec', {
     method: 'POST',
     body: formData
   });
@@ -33,3 +33,4 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   // Limpiar el formulario
   event.target.reset();
 });
+

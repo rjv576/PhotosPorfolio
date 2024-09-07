@@ -57,11 +57,14 @@ header.encabezado {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinear contenido a la derecha */
 }
 
 .contacto form label {
     width: 100%;
-    text-align: right;
+    text-align: left;
     margin-bottom: 0.5rem;
 }
 
@@ -72,6 +75,7 @@ header.encabezado {
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho total */
 }
 
 .contacto form button {
@@ -90,11 +94,7 @@ header.encabezado {
 }
 
 /* Media Queries para dispositivos más pequeños */
-
-@media (max-width: 768px) {
-    body {
-        width: 100%;
-    }
+@media (max-width: 1024px) {
     .contacto {
         padding: 1rem;
         width: 90%;
@@ -111,6 +111,31 @@ header.encabezado {
     .contacto form input,
     .contacto form textarea {
         margin-bottom: 0.5rem;
+        box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho total */
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+
+    .contacto {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    #contactForm {
+        padding: 1rem;
+    }
+
+    #contactoForm label {
+        text-align: left; /* Alinear etiquetas a la izquierda en pantallas pequeñas */
+    }
+
+    #contactoForm input,
+    #contactoForm textarea {
+        margin-bottom: 0.5rem;
+        box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho total */
     }
 }
     
@@ -119,13 +144,20 @@ header.encabezado {
 @media (max-width: 480px) {
     .contacto {
         padding: 0.5rem;
+        width: 90%;
     }
 
-    .contacto form {
+    #contactForm {
         padding: 0.5rem;
     }
+    #contactForm input,
+    #contactForm textarea {
+        width: 100%; /* Asegurar que el textarea ocupe el 100% del ancho */
+        margin-bottom: 0.5rem;
+        box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho total */
+    }
 
-    .contacto form button {
+    #contactForm button {
         width: 100%; /* Hacer que el botón ocupe todo el ancho en pantallas muy pequeñas */
     }
 }
