@@ -49,7 +49,11 @@ header.encabezado {
     flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas más pequeñas */
     justify-content: center;
 }
-
+.intro .contenedor-texto h1{
+    font-size: 50px;
+    font-style: italic;
+    color: coral;
+}
 .intro .contenedor-texto, .about .contenedor-texto {
     margin-top: 0.5rem; /* Añadir margen superior para separar los elementos */
     flex: 1; /* Permitir que el contenedor de texto ocupe el espacio disponible */
@@ -110,22 +114,14 @@ section.mini-galeria {
 .grid-item {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    background-color: white;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .grid-item img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
-}
-
-.grid-item p {
-    margin: 0;
-    padding: 1rem;
 }
 
 @media (max-width: 768px) {
