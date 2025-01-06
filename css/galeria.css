@@ -37,50 +37,52 @@ header.encabezado {
     background-color: #ddd;
     color: black;
 }
-
+.galeria {
+    padding: 10px;
+}
 .row {
     background: #ddd;
     display: flex;
     flex-wrap:wrap;
-    padding: 0 4px;
-    /*align-items: flex-start; /* Alinear las columnas al inicio */
+    gap: 10px;
+    /* padding: 0 4px; */
+    
 }
   
 /* Create four equal columns that sits next to each other */
 .column {
-    flex: 25%;/* Ajustar el ancho de las columnas */
-    max-width: 100%; /* Ajustar el ancho máximo de las columnas */
-    padding: 0 4px; /* Añadir algo de espacio entre las columnas */
-    height: auto; /* Ajustar la altura de las columnas */
-    margin: 0; /* Eliminar márgenes automáticos */
-    box-sizing: border-box; /*Asegurar que el padding se incluya en el ancho total */
-}
+    flex: 1;/* Ajustar el ancho de las columnas */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* max-width: 100%;  Ajustar el ancho máximo de las columnas 
+    padding: 0 4px; Añadir algo de espacio entre las columnas 
+    height: auto;  Ajustar la altura de las columnas 
+    margin: 0;  Eliminar márgenes automáticos 
+    box-sizing: border-box; /*Asegurar que el padding se incluya en el ancho total 
+    */
+} 
   
 .column img {
-    margin-top: 2px;
-    margin-bottom: 8px;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 1000px;
+    object-fit: cover; /* Recorta las imágenes para que encajen sin deformarse */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para un mejor estilo */
+    /* margin-top: 2px;
+    margin-bottom: 8px; */
 }
   
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
+    .row {
+        gap: 5px; /* Reduce el espacio entre columnas en pantallas pequeñas */
+    }
     .column {
-      flex: 25%; /* Ajustar el ancho de las columnas */
-      max-width: 50%; /* Ajustar el ancho máximo de las columnas */
+        flex: 1 1 100%; /* Una columna en dispositivos móviles */
     }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column {
-      flex: 100%; /* Ajustar el ancho de las columnas */
-      max-width: 100%; /* Ajustar el ancho máximo de las columnas */
-      
-    }
-
-}
 
 /* Estilos para el footer */
 

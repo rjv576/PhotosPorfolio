@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box; /* Asegura que padding y border estén dentro del tamaño del elemento */
+}
+
 body {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
@@ -5,7 +9,8 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    background-image: url(../img/Editorial/Copy\ of\ E\ 4.jpg);
+    background-color: bisque;
+    /* background-image: url(../img/Contacto.jpg); */
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -40,80 +45,125 @@ header.encabezado {
     background-color: #ddd;
     color: black;
 }
-
-section.contacto{
+/* Estilos para el contenedor principal */
+.contacto {
+    height: 80svh;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
 }
 
-.contact-section {
-    /* background semi transparente */
-    /* background: rgba(255, 255, 255, 0.1); 90% de opacidad */
-    background: transparent;
-    width: 80%;
-    padding: 20px;
+.contacto form {
+    background: rgba(255, 255, 255, 0.3); /* Fondo transparente */
+    padding: 2rem;
     border-radius: 10px;
-    max-width: 400px;
-    margin: auto;
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinear contenido a la derecha */
 }
 
-.contact-section h2 {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    font-weight: 700;
-    font-style: italic;
-    color:#ffa500;
+.contacto form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
 }
 
-.contact-section p {
-    color: #333;
-    margin: 10px 0;
-    font-size: 1.3rem;
-    font-weight: 700;
-    font-style: italic;
+.contacto form input,
+.contacto form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho total */
 }
 
-.contact-section a {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #ffa744;
-    text-decoration: none;
+.contacto form button {
+    align-self: center; /* Centrar el botón de enviar */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-.contact-section a:hover {
-    text-decoration: underline;
+.contacto form button:hover {
+    background-color: #ccc;
 }
 
 /* Media Queries para dispositivos más pequeños */
-@media (max-width: 768px) {
-    .contact-section {
+@media (max-width: 1024px) {
+    .contacto {
+        padding: 1rem;
         width: 90%;
-        padding: 15px;
+    }
+
+    .contacto form {
+        padding: 1rem;
+    }
+
+    .contacto form label {
+        text-align: left; /* Alinear etiquetas a la izquierda en pantallas pequeñas */
+    }
+
+    .contacto form input,
+    .contacto form textarea {
+        margin-bottom: 0.5rem;
+        box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho total */
     }
     
-
-    .contact-section h2 {
-        font-size: 2rem;
-    }
-    .contact-section a {
-        font-size: 1rem;
-    }
 }
 
+@media (max-width: 768px) {
+
+
+    .contacto {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    #contactForm {
+        padding: 1rem;
+    }
+
+    #contactoForm label {
+        text-align: left; /* Alinear etiquetas a la izquierda en pantallas pequeñas */
+    }
+
+    #contactoForm input,
+    #contactoForm textarea {
+        margin-bottom: 0.5rem;
+        box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho total */
+    }
+}
+    
+
+
 @media (max-width: 480px) {
-    .contact-section {
-        width: 100%;
-        padding: 10px;
+    .contacto {
+        padding: 0.5rem;
+        width: 90%;
     }
 
-    .contact-section h2 {
-        font-size: 1.5rem;
+    #contactForm {
+        padding: 0.5rem;
+    }
+    #contactForm input,
+    #contactForm textarea {
+        width: 100%; /* Asegurar que el textarea ocupe el 100% del ancho */
+        margin-bottom: 0.5rem;
+        box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho total */
     }
 
-    .contact-section a {
-        font-size: .90rem;
+    #contactForm button {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho en pantallas muy pequeñas */
     }
 }
 /* Estilos para el footer */
